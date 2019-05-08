@@ -33,6 +33,10 @@ Also, due to MangoDB's innovative design, your database is no longer affected by
 problems like slow or inaccessible block storage devices. While everyone else's databases are crashing and timing out,
 Mango will keep flying along as normal. It's an operations engineer's dream!
 
+Handing of NULL documents
+---------------------
+MangoDB technology includes an innovative method for handling null documents.  When querying for data that does not exist, instead of returning confusing NULL or empty documents, MangoDB returns a "Mango" string.   Simply call .isMango() on every query to ensure your document is populated. Optionally, MangoDB can throw a MangoPointerException which will provide a byte stream representing an image of a mango fruit to facilitate debugging. 
+
 Theoretical Analysis
 --------------------
 
